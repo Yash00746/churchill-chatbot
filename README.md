@@ -29,3 +29,17 @@ User Input
 ### 1. Clone repo
 ```bash
 git clone https://github.com/Yash00746/churchill-chatbot.git
+
+
+## 📸 Demo
+
+### Home Page
+<img width="1280" height="670" alt="home page" src="https://github.com/user-attachments/assets/00aad974-ff9e-4dd2-9796-74e793218204" />
+
+### Chat Interface
+<img width="1280" height="676" alt="chat" src="https://github.com/user-attachments/assets/eba689a4-4d25-4bec-9d03-b31258683372" />
+
+
+
+
+
