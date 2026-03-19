@@ -2,6 +2,10 @@
 
 An intelligent hybrid chatbot that simulates Winston Churchill using rule-based scripting and LLM fallback.
 
+## 💡 Why This Project?
+
+This project explores how deterministic systems and large language models can be combined to build reliable, controllable AI applications with consistent personality and memory.
+
 ## 🚀 Features
 
 - 🧠 Hybrid AI (Scripted + LLM fallback)
