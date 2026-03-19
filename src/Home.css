@@ -1,0 +1,115 @@
+.home-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(40, 32, 22, 0.65),
+      rgba(20, 16, 12, 0.75)),
+    url("./assets/Churchill.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  font-family: "Georgia", serif;
+  color: #f7e7c1;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle,
+      transparent 40%,
+      rgba(0, 0, 0, 0.75) 100%);
+}
+
+.home-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  color: #f5deb3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home-subtitle {
+  font-size: 1.35rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+  color: #f4e8c8;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #c9a86a, #8f6b31);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  background: linear-gradient(145deg, #d4b578, #735824);
+}
+
+.fade-in {
+  animation: fadeIn 1.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.8rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .home-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+}

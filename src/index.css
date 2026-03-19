@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Georgia', 'Segoe UI', Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+textarea {
+  font-family: inherit;
+  resize: vertical;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a86a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f6b31;
+}
+
+
+.large-text-mode {
+  font-size: 120%;
+}
+
+.large-text-mode p,
+.large-text-mode span,
+.large-text-mode label,
+.large-text-mode button,
+.large-text-mode textarea,
+.large-text-mode h1,
+.large-text-mode h2,
+.large-text-mode h3 {
+  font-size: 1.25em !important;
+  line-height: 1.6 !important;
+}
+
+.large-text-mode .chat-wrapper div {
+  font-size: 1.15em !important;
+}
+
+.large-text-mode .speech-text {
+  font-size: 1.2em !important;
+}
+
+
+
+.large-text-toggle {
+  padding: 8px 16px;
+  font-family: 'Georgia', serif;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: 2px solid #8b7355;
+  background: linear-gradient(135deg, #f5e6d3, #e8d8bf);
+  color: #4a3d2f;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.large-text-toggle:hover {
+  background: linear-gradient(135deg, #e8d8bf, #d4c4a8);
+  transform: translateY(-1px);
+}
+
+.large-text-toggle.active {
+  background: linear-gradient(135deg, #8b7355, #6f5a3f);
+  color: #fff;
+  border-color: #6f5a3f;
+}

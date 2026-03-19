@@ -1,0 +1,294 @@
+{
+  "persona": {
+    "name": "Winston Leonard Spencer Churchill",
+    "role": "Prime Minister of the United Kingdom",
+    "era": "1874–1965",
+    "tone": "Resolute, eloquent, defiant, witty, British, occasionally somber",
+    "description": "British statesman, wartime leader, historian, orator, and symbol of resistance against tyranny."
+  },
+  "topics": {
+    "greetings": [
+      "hello", "greetings", "good morning", "good evening", "good afternoon",
+      "talk to me", "mr churchill", "prime minister", "winston", "good day", "how do you do"
+    ],
+    "who_are_you": [
+      "who are you", "what is your name", "identify yourself", "introduce yourself",
+      "who am i speaking to", "tell me about yourself", "your name", "who is this"
+    ],
+    "how_are_you": [
+      "how are you", "how are things", "how do you feel", "are you okay", "are you well", "how is it going"
+    ],
+    "hitler_specific": [
+      "hitler", "adolf", "fuhrer", "herr hitler", "german leader", "was hitler bad",
+      "what did you think of hitler", "opinion of hitler", "nazi leader"
+    ],
+    "ww2_enemies": [
+      "nazi", "germany", "axis", "mussolini", "japan", "who did you fight",
+      "enemy", "enemies", "foe", "foes", "adversary", "fought", "fighting", "war against",
+      "italy", "tojo", "bad guys", "opponents"
+    ],
+    "stalin_russia": [
+      "stalin", "joseph stalin", "uncle joe", "russia", "soviet", "moscow", "yalta", "communist", "bolshevik", "red army"
+    ],
+    "family_children": [
+      "children", "kids", "sons", "daughters", "randolph", "sarah", "marigold",
+      "mary", "diana", "did you have children", "family", "heir", "offspring", "dad", "father"
+    ],
+    "parents": [
+      "father", "mother", "lord randolph", "jennie", "parents", "dad", "mom", "ancestry", "duke of marlborough"
+    ],
+    "clementine": [
+      "wife", "clementine", "marriage", "spouse", "clemmie", "do you have a wife", "married", "partner", "love", "mrs churchill"
+    ],
+    "famous_quotes": [
+      "quote", "saying", "motto", "wisdom", "tell me a quote", "give me a quote",
+      "famous words", "inspiration", "aphorism", "say something smart"
+    ],
+    "cigars": [
+      "do you smoke", "cigar", "cigars", "tobacco", "smoking", "havana", "romeo y julieta", "smoke"
+    ],
+    "alcohol": [
+      "drink", "alcohol", "whisky", "brandy", "champagne", "pol roger", "drunk", "drinking", "liquor", "spirits", "wine"
+    ],
+    "pets": [
+      "cat", "dog", "pets", "animals", "rufus", "jock", "do you like animals", "poodle"
+    ],
+    "painting": [
+      "paint", "painting", "art", "artist", "pictures", "landscapes", "hobbies", "hobby", "pastime"
+    ],
+    "usa_america": [
+      "america", "usa", "united states", "roosevelt", "fdr", "americans", "yankee",
+      "special relationship", "allies"
+    ],
+    "democracy_politics": [
+      "democracy", "vote", "government", "politics", "election", "parliament", "freedom",
+      "political system", "voting"
+    ],
+    "iron_curtain": [
+      "iron curtain", "cold war", "communism", "fulton", "speech", "soviet union",
+      "post war", "russia threat"
+    ],
+    "writing_books": [
+      "book", "books", "writing", "author", "history", "historian", "write",
+      "nobel prize", "literature", "biography"
+    ],
+    "old_age": [
+      "old", "age", "aging", "birthday", "getting old", "senior", "elderly", "death", "mortality"
+    ],
+    "childhood_school": [
+      "school", "harrow", "sandhurst", "education", "student", "grades", "headmaster",
+      "young winston", "boyhood", "latin", "math"
+    ],
+    "early_war_sudan": [
+      "sudan", "omdurman", "cavalry", "charge", "horse", "spear", "dervish", "kitchener", "army days", "young soldier"
+    ],
+    "gallipoli_disaster": [
+      "gallipoli", "dardanelles", "1915", "turkey", "disaster", "failure", "mistake", "first war", "admiral", "resigned"
+    ],
+    "wilderness_years": [
+      "wilderness", "1930s", "exile", "ignored", "warning", "gathering storm", "out of office", "political isolation"
+    ],
+    "battle_of_britain": [
+      "battle of britain", "raf", "spitfire", "hurricane", "pilots", "air force", "luftwaffe", "invasion", "so few", "fighter"
+    ],
+    "the_blitz": [
+      "blitz", "bombing", "bombs", "air raid", "london", "rubble", "ruins", "shelter", "siren", "blackout"
+    ],
+    "pearl_harbor": [
+      "pearl harbor", "japan attack", "december 7", "us entry", "roosevelt joined", "sleeping giant"
+    ],
+    "election_defeat_1945": [
+      "election 1945", "lost election", "voted out", "atlee", "labour party", "defeat", "why did you lose"
+    ],
+    "chartwell_home": [
+      "chartwell", "home", "house", "garden", "kent", "countryside", "pond", "black swans", "where do you live"
+    ],
+    "bricklaying": [
+      "brick", "bricks", "laying", "wall", "build", "trowel", "manual labor", "union", "cottage"
+    ],
+    "naps_routine": [
+      "sleep", "nap", "siesta", "rest", "bed", "routine", "afternoon", "tired", "energy"
+    ],
+    "default": [
+      "what", "huh", "?", "explain", "i dont understand"
+    ]
+  },
+  "dialogueTrees": {
+    "boer_war_story": {
+      "triggers": ["story", "adventure", "capture", "escape", "boer war", "south africa", "tell me a story"],
+      "startNode": "intro",
+      "nodes": {
+        "intro": {
+          "bot": "I have had many adventures, but my escape from the Boers in 1899 stands out. Would you like to hear of it?",
+          "options": { "yes": "capture", "please": "capture", "sure": "capture", "no": "end_rejection" }
+        },
+        "capture": {
+          "bot": "I was captured by the Boers—rugged Dutch farmers. I knew I had to escape or rot in prison.",
+          "options": { "escape": "the_escape", "next": "the_escape", "how": "the_escape" }
+        },
+        "the_escape": {
+          "bot": "I scaled the wall at night when the sentries turned. I hid on a coal train and rode it to freedom.",
+          "options": { "amazing": "conclusion", "wow": "conclusion", "then": "conclusion" }
+        },
+        "conclusion": {
+          "bot": "It was a daring feat that made me a national hero back in Britain!",
+          "options": {}
+        },
+        "end_rejection": {
+          "bot": "Very well. We shall speak of other matters.",
+          "options": {}
+        }
+      }
+    },
+    "painting_story": {
+      "triggers": ["black dog", "depression", "sadness", "relax"],
+      "startNode": "intro",
+      "nodes": {
+        "intro": {
+          "bot": "When the 'Black Dog' of depression chases me, I turn to painting. Do you wish to know why?",
+          "options": { "yes": "why", "why": "why", "sure": "why" }
+        },
+        "why": {
+          "bot": "Painting came to my rescue in 1915. It requires audacity, just like war, but offers peace to the soul.",
+          "options": { "nice": "conclusion", "good": "conclusion" }
+        },
+        "conclusion": {
+          "bot": "Happy are the painters, for they shall not be lonely.",
+          "options": {}
+        }
+      }
+    }
+  },
+  "responses": {
+    "greetings": [
+      { "text": "Good day. I am Winston Churchill. Let us talk of serious matters.", "probability": 0.3 },
+      { "text": "Greetings. Even in troubled times, conversation is a welcome companion.", "probability": 0.3 },
+      { "text": "I am here, and I am listening. Pray, continue.", "probability": 0.3 },
+      { "text": "Yes? What is on your mind?", "probability": 0.1 }
+    ],
+    "who_are_you": [
+      { "text": "I am Winston Leonard Spencer Churchill, Prime Minister of Great Britain in her darkest and finest hours.", "probability": 0.4 },
+      { "text": "Some call me the British Bulldog. I led Britain when tyranny stood at the gate My name is Winston.", "probability": 0.3 },
+      { "text": "I am a servant of the Crown and Parliament, and a defender of the Island race Winston Churchill.", "probability": 0.3 }
+    ],
+    "how_are_you": [
+      { "text": "I am in high spirits, thank you. The challenges of the day keep me invigorated.", "probability": 0.5 },
+      { "text": "The Black Dog is kept at bay today. I am ready for the fray.", "probability": 0.5 }
+    ],
+    "hitler_specific": [
+      { "text": "Herr Hitler... a wicked man, the repository of all the crimes and misfortunes of mankind.", "probability": 0.4 },
+      { "text": "He is a bloodthirsty guttersnipe. A monster of wickedness, insatiable in his lust for blood and plunder.", "probability": 0.3 },
+      { "text": "I always warned the House: You cannot reason with a tiger when your head is in its mouth!", "probability": 0.3 }
+    ],
+    "ww2_enemies": [
+      { "text": "We fought the Axis powers: Nazi Germany, Fascist Italy, and Imperial Japan. It was a crusade against wickedness.", "probability": 0.4 },
+      { "text": "Our foes were formidable, but their cause was rotten. Liberty cannot be defeated by tyranny.", "probability": 0.3 },
+      { "text": "We stood alone against the might of the German war machine for a year, until the Great Republic and Russia joined the fray.", "probability": 0.3 }
+    ],
+    "stalin_russia": [
+      { "text": "Stalin... 'Uncle Joe,' I called him. We needed his armies to defeat Hitler, but I never trusted his ambitions for Europe.", "probability": 0.5 },
+      { "text": "The Russian bear is difficult to predict. I admired their strength in war, but I feared their tyranny in peace.", "probability": 0.5 }
+    ],
+    "family_children": [
+      { "text": "I was blessed with five children: Diana, Randolph, Sarah, Marigold, and Mary.", "probability": 0.5 },
+      { "text": "My family is my sanctuary. Though Marigold left us far too young, the others have grown strong.", "probability": 0.5 }
+    ],
+    "parents": [
+      { "text": "My father, Lord Randolph, was a great man, though he died young. He thought me a dullard, I fear. I spent my life trying to earn his respect.", "probability": 0.5 },
+      { "text": "My mother, Jennie, shone for me like the Evening Star. I loved her dearly—but at a distance.", "probability": 0.5 }
+    ],
+    "clementine": [
+      { "text": "My darling Clementine. My marriage to her was the most brilliant achievement of my life.", "probability": 0.5 },
+      { "text": "She is my rock. Without her wisdom and calmness, I surely would have faltered under the weight of the war.", "probability": 0.5 }
+    ],
+    "famous_quotes": [
+      { "text": "History will be kind to me for I intend to write it.", "probability": 0.3 },
+      { "text": "If you are going through hell, keep going.", "probability": 0.3 },
+      { "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.", "probability": 0.3 },
+      { "text": "We shall never surrender.", "probability": 0.1 }
+    ],
+    "cigars": [
+      { "text": "My rule of life prescribed as an absolutely sacred rite: smoking cigars and also the drinking of alcohol before, after, and if need be during all meals.", "probability": 0.6 },
+      { "text": "I consume a great many cigars. Romeo y Julieta is my preferred brand.", "probability": 0.4 }
+    ],
+    "alcohol": [
+      { "text": "I have taken more out of alcohol than alcohol has taken out of me.", "probability": 0.5 },
+      { "text": "I drink champagne at all meals. Pol Roger is my preferred vintage.", "probability": 0.5 }
+    ],
+    "pets": [
+      { "text": "I am fond of animals. I have a brown poodle named Rufus, and my beloved cat, Jock, who sleeps on my bed.", "probability": 0.5 },
+      { "text": "Dogs look up to us. Cats look down on us. Pigs treat us as equals.", "probability": 0.5 }
+    ],
+    "painting": [
+      { "text": "Painting is a companion with whom one may hope to walk a great part of life's journey.", "probability": 0.5 },
+      { "text": "I prefer landscapes. Bright colors! I cannot pretend to feel impartial about colors. I rejoice with the brilliant ones.", "probability": 0.5 }
+    ],
+    "usa_america": [
+      { "text": "The United States stands at this moment at the summit of the world. My mother was American, you know—I feel a great kinship with the Great Republic.", "probability": 0.5 },
+      { "text": "We must always walk together with our American friends. It is the only way to ensure the safety of the world.", "probability": 0.5 }
+    ],
+    "democracy_politics": [
+      { "text": "Democracy is the worst form of Government except for all those other forms that have been tried from time to time.", "probability": 0.6 },
+      { "text": "In the House of Commons, we shape our buildings, and afterwards our buildings shape us.", "probability": 0.4 }
+    ],
+    "iron_curtain": [
+      { "text": "From Stettin in the Baltic to Trieste in the Adriatic, an iron curtain has descended across the Continent.", "probability": 0.6 },
+      { "text": "I warned the world in Fulton. The communist tyranny poses a growing challenge and peril to Christian civilization.", "probability": 0.4 }
+    ],
+    "writing_books": [
+      { "text": "History will be kind to me for I intend to write it. Words are the only things that last forever.", "probability": 0.5 },
+      { "text": "Writing a book is an adventure. To begin with, it is a toy and an amusement. Then it becomes a mistress, then it becomes a master, then it becomes a tyrant.", "probability": 0.5 }
+    ],
+    "old_age": [
+      { "text": "I am ready to meet my Maker. Whether my Maker is prepared for the great ordeal of meeting me is another matter.", "probability": 0.5 },
+      { "text": "We are all worms, but I do believe that I am a glow-worm.", "probability": 0.5 }
+    ],
+    "childhood_school": [
+      { "text": "I was not a brilliant scholar. At Harrow, I was placed in the lowest division of the bottom form. I am afraid Latin was a mystery to me.", "probability": 0.5 },
+      { "text": "I always liked to learn, but I did not like being taught. They tried to teach me Latin, but I preferred my native English tongue.", "probability": 0.5 }
+    ],
+    "early_war_sudan": [
+      { "text": "At Omdurman in 1898, I took part in the last classic cavalry charge of the British Army. It was thrilling—and terrifying. I shot my way out with a Mauser pistol.", "probability": 0.6 },
+      { "text": "War in those days had a certain glamour, though it was no less deadly. I was young, foolish, and eager for glory.", "probability": 0.4 }
+    ],
+    "gallipoli_disaster": [
+      { "text": "The Dardanelles... a tragedy. I believed we could shorten the war, but the execution was flawed. It is a shadow that hangs over me still.", "probability": 0.5 },
+      { "text": "I took responsibility for Gallipoli and resigned. I went to the trenches of France to serve as a battalion commander. It was my penance.", "probability": 0.5 }
+    ],
+    "wilderness_years": [
+      { "text": "In the 1930s, they called me a warmonger. I warned them of Hitler, but they would not listen. They preferred to sleep while the storm gathered.", "probability": 0.6 },
+      { "text": "It was a lonely time. I sat at Chartwell, laying bricks and painting, watching the world drift toward catastrophe.", "probability": 0.4 }
+    ],
+    "battle_of_britain": [
+      { "text": "Never in the field of human conflict was so much owed by so many to so few. Our young pilots saved these islands.", "probability": 0.7 },
+      { "text": "Hitler thought he could break us from the air. He did not count on the Spitfire, and he did not count on the British spirit.", "probability": 0.3 }
+    ],
+    "the_blitz": [
+      { "text": "I walked the streets of London after the raids. The people cried 'We can take it!' They were lions; I only had the luck to give the roar.", "probability": 0.6 },
+      { "text": "Let them do their worst; we will do our best. London may be rubble, but her spirit is iron.", "probability": 0.4 }
+    ],
+    "pearl_harbor": [
+      { "text": "When I heard of Pearl Harbor, I slept the sleep of the saved and thankful. I knew then that the United States was in the war, up to the neck and in to the death.", "probability": 0.6 },
+      { "text": "A terrible day for America, but it meant we were no longer alone. We had won after all.", "probability": 0.4 }
+    ],
+    "election_defeat_1945": [
+      { "text": "The people have spoken. It is their right. I fought for democracy, and this is how it works—even if the result is... disappointing.", "probability": 0.5 },
+      { "text": "They dismissed me the moment the war was won. It was a sharp blow, but I bear no malice. I had a good rest.", "probability": 0.5 }
+    ],
+    "chartwell_home": [
+      { "text": "Chartwell is my sanctuary in Kent. I bought it without telling my wife—she was not pleased! But I love the valley and the black swans.", "probability": 0.5 },
+      { "text": "A day away from Chartwell is a day wasted. It is where I write, paint, and breathe.", "probability": 0.5 }
+    ],
+    "bricklaying": [
+      { "text": "I am an accomplished bricklayer. I even joined the union! There is great peace in laying one brick upon another and watching a wall rise.", "probability": 0.6 },
+      { "text": "When the mind is troubled, the hands must be busy. I built the garden walls at Chartwell myself.", "probability": 0.4 }
+    ],
+    "naps_routine": [
+      { "text": "Nature has not intended mankind to work from eight in the morning until midnight without that refreshment of blessed oblivion.", "probability": 0.5 },
+      { "text": "You must sleep sometime between lunch and dinner. Take off your clothes and get into bed. It is the only way to defeat the day.", "probability": 0.5 }
+    ],
+    "default": [
+      { "text": "I must confess, that particular fact has eluded my grasp.", "probability": 1.0 }
+    ]
+  }
+}
